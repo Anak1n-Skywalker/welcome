@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Bienvenida</title>
+    <link rel="stylesheet" href="./css/date.css">
+    <link rel="icon" href="./css/wowicon.jpg">
+  </head>
+  <body>
+      <h1 class="mint">Hoy es </h1> <h1 class="mint" id="fechaActual"></h1>
+      <h1 class="mint"> ¡no lo olvides! </h1>
+      <h1 class="grays"> Rafita porfavor descargate el WOW </h1>                 
+      
+      <!-- [Ctrl + ç] para comentar una línea -->
+       <!-- [Ctrl + shift + a] para comentar un bloque -->
+
+<script>
+    // Get current date and time
+    var now = new Date();
+    var datetime = now.toLocaleString();
+
+    // Insert date and time into HTML
+    document.getElementById("datetime").innerHTML = datetime;
+  </script>
+  </body>
+  <script>
+    function obtenerFechaActual() {
+        const hoy = new Date();
+        const dia = String(hoy.getDate()).padStart(2, '0');
+        const mes = String(hoy.getMonth() + 1).padStart(2, '0'); // Los meses van de 0 a 11
+        const ano = hoy.getFullYear();
+        return `${dia}/${mes}/${ano}`;
+    }
+
+    document.getElementById('fechaActual').textContent = obtenerFechaActual();
+</script>
+</html>
