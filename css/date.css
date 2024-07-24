@@ -33,6 +33,16 @@ h1 {
   margin: 0;
 }
 
+.reminderOfTheDayTitle  {
+  font-size: 40px;
+}
+
+.reminderOfTheDay {
+  font-size: 25px;
+  font-family: Rocher;
+  font-palette: --Purples;
+}
+
 @font-palette-values --Grays {
   font-family: Rocher;
   base-palette: 9;
